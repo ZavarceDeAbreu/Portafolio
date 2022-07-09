@@ -1,9 +1,16 @@
 /*Indice
-    1-Custom Properties
-    2-Reset
-    3-Components
-    4-Utilities
-    5-Site Styles 
+    1- Custom Properties
+    2- Reset
+    3- Components
+    4- Header Section
+    5- Navbar
+    6- Hero Section
+    7- About Section
+    8- Education Section
+    9- Portfolio Section
+    10- Experience Section
+    11- Contact
+    12- Footer
 */
 
 /*--------------------------------------------------------------
@@ -61,7 +68,7 @@ span {
 }
 
 /*--------------------------------------------------------------
-# Componentes
+#3 Components
 --------------------------------------------------------------*/
 
 .section-title {
@@ -103,7 +110,7 @@ span {
 .btn {
   background: var(--line);
   border-radius: 4px;
-  box-shadow: 0 8px 28px var(--fill);
+  box-shadow: 0 8px 28px var(--line-dark);
   color: var(--light);
   display: inline-block;
   font-size: 16px;
@@ -117,7 +124,7 @@ span {
 .btn:hover {
   color: var(--light);
   background: var(--line-dark);
-  box-shadow: 0 8px 28px var(--line-dark);
+  box-shadow: 0 8px 28px var(--fill);
 }
 
 .btn-edit {
@@ -146,7 +153,7 @@ span {
 }
 
 /*--------------------------------------------------------------
-# Header
+# 4 Header
 --------------------------------------------------------------*/
 #header {
   left: 0;
@@ -169,7 +176,7 @@ span {
   line-height: 1;
 }
 
-.logo spam {
+.logo span {
   color: var(--line);
 }
 
@@ -180,7 +187,7 @@ span {
 }
 
 /*--------------------------------------------------------------
-# Navbar
+# 5 Navbar
 --------------------------------------------------------------*/
 /*Desktop Navigation*/
 .navbar {
@@ -319,7 +326,7 @@ span {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# 6 Hero Section
 --------------------------------------------------------------*/
 
 #hero {
@@ -407,7 +414,7 @@ span {
 
 @media (max-width: 575px) {
   #hero {
-    background-image: url(/FrontEnd/assets/img/imagenesFondo/ttten.svg);
+    background-image: url(/assets/img/imagenesFondo/ttten.svg);
     background-repeat: no-repeat;
 
   }
@@ -419,7 +426,7 @@ span {
 }
 
 /*--------------------------------------------------------------
-# about Section
+# 7 about Section
 --------------------------------------------------------------*/
 
 .about .content ul {
@@ -440,7 +447,7 @@ span {
 }
 
 /*--------------------------------------------------------------
-# Education Section
+# 8 Education Section
 --------------------------------------------------------------*/
 .progress_bar .pro-bar {
   background: hsl(255, 255, 97%);
@@ -501,7 +508,7 @@ span {
 }
 
 /*--------------------------------------------------------------
-# portfolio Section
+# 9 Portfolio Section
 --------------------------------------------------------------*/
 .portfolio #portfolio-flters {
   border-radius: 50px;
@@ -602,7 +609,7 @@ span {
 }
 
 /*--------------------------------------------------------------
-# experience Section
+# 10 Experience Section
 --------------------------------------------------------------*/
 
 #experience {
@@ -626,9 +633,9 @@ span {
   cursor: pointer;
   display: block;
   font-family: var(--line);
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 20px;
   padding-left: 25px;
   position: relative;
   transition: 0.3s;
@@ -643,12 +650,12 @@ span {
 #experience .experience-list .collapse-div .date,
 .place {
   color: var(--subtext);
-  font-size: 12px;
+  font-size: 16px;
   text-transform: uppercase;
 }
 
 #experience .experience-list i {
-  font-size: 16px;
+  font-size: 20px;
   left: 0;
   position: absolute;
   top: -2px;
@@ -691,7 +698,7 @@ span {
 }
 
 /*--------------------------------------------------------------
-# Contact
+# 11 Contact
 --------------------------------------------------------------*/
 .contact .info {
   border-bottom: 3px solid var(--line);
@@ -877,7 +884,7 @@ span {
 }
 
 /*--------------------------------------------------------------
-# Footer
+# 12 Footer
 --------------------------------------------------------------*/
 
 #footer {
@@ -1001,6 +1008,6 @@ span {
     float: none;
     text-align-last: center;
     -moz-text-align-last: center;
-    
+
   }
 }
