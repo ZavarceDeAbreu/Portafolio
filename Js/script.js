@@ -8,8 +8,7 @@ AOS.init({
 const toggle_btn = document.querySelector(".toggle-btn")
 const imgchangehero = document.getElementById("img-fluid")
 let firstTheme = localStorage.getItem("dark")
-changeTheme(+firstTheme);
-function changeTheme(isDark) {
+function changeTheme() {
   if (!document.body.classList.contains("dark")) {
     document.body.classList.add("dark");
     toggle_btn.classList.replace("bi-moon-stars", "bi-brightness-high")
@@ -23,7 +22,7 @@ function changeTheme(isDark) {
   }
 }
 toggle_btn.addEventListener("click", () => {
-  changeTheme(!document.body.classList.contains("dark"));
+  changeTheme();
 });
 
 (function () {
