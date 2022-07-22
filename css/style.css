@@ -11,6 +11,8 @@
     10- Experience Section
     11- Contact
     12- Footer
+
+    
 */
 
 /*--------------------------------------------------------------
@@ -18,17 +20,37 @@
 --------------------------------------------------------------*/
 
 :root {
-  --box-shadow: 0px 5px 10px rgba(57, 56, 61, 0.205);
+  --box-shadow: 0px 5px 10px rgba(95, 0, 203, 0.205);
+  --box-shadow-dark: 0px 5px 10px rgba(95, 0, 203, 0.541);
+  --box-shadow-line: 0px 5px 10px rgba(95, 0, 203, 0.205);
   --bg: rgb(244, 249, 252);
-  --duo: rgb(16, 93, 103);
+  --bg-hover: rgba(244, 249, 252, 0.753);
+  --bg-gradient: linear-gradient(to right, #c9d6ff, #e2e2e2);
   --fill: rgba(95, 0, 203, 0.5);
   --fill-dark: rgba(95, 0, 203, 0.048);
-  --gray-color: #ccc;
   --light: rgb(255, 255, 255);
   --line: rgb(96, 0, 203);
-  --line-dark: hsl(268, 100%, 35%);
-  --subtext: #949cac;
+  --line-hover: hsl(268, 100%, 35%);
   --text: rgb(15, 27, 97);
+  --subtext: #949cac;
+  --subtext-second: rgb(244, 249, 252);
+}
+
+body.dark {
+  --box-shadow: 0px 5px 10px rgba(25, 34, 41, 0.205);
+  --box-shadow-dark: 0px 5px 10px rgba(0, 0, 0, 0.541);
+  --box-shadow-line: 0px 5px 10px rgba(0, 0, 0, 0.603);
+  --bg: #192229;
+  --bg-hover: rgba(33, 46, 54, 0.753);
+  --bg-gradient: linear-gradient(to right, #141e30, #243b55);
+  --fill: #EDCA40;
+  --fill-dark: #212E36;
+  --light: #212e36;
+  --line: rgb(144, 188, 203);
+  --line-hover: #7ba4b2;
+  --text: #EFF3F5;
+  --subtext: #949cac;
+  --subtext-second: #2A3B47;
 }
 
 /*--------------------------------------------------------------
@@ -64,15 +86,19 @@ section {
 }
 
 span {
-  color: var(--line);
+  color: var(--fill);
 }
+
+/*--------------------------------------------------------------
+#3 Switch
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 #3 Components
 --------------------------------------------------------------*/
 
 .section-title {
-  padding: 30px 0;
+  padding: 25px 0;
   position: relative;
   text-align: center;
 }
@@ -110,8 +136,8 @@ span {
 .btn {
   background: var(--line);
   border-radius: 4px;
-  box-shadow: 0 8px 28px var(--line-dark);
-  color: var(--light);
+  box-shadow: var(--box-shadow-dark);
+  color: var(--subtext-second);
   display: inline-block;
   font-size: 16px;
   letter-spacing: 1px;
@@ -119,12 +145,13 @@ span {
   padding: 8px 30px 10px 30px;
   text-transform: capitalize;
   transition: 0.5s;
+  font-weight: 700;
 }
 
 .btn:hover {
-  color: var(--light);
-  background: var(--line-dark);
-  box-shadow: 0 8px 28px var(--fill);
+  background: var(--line-hover);
+  box-shadow: var(--box-shadow);
+  color: var(--subtext-second);
 }
 
 .btn-edit {
@@ -134,6 +161,19 @@ span {
 .featurette-divider {
   color: var(--duo);
   margin: 80px 70px;
+}
+
+.toggle-btn {
+  font-size: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .toggle-btn {
+    margin-right: 25px;
+  }
+  
 }
 
 @media (max-width: 575px) {
@@ -179,6 +219,7 @@ span {
 .logo span {
   color: var(--line);
 }
+
 
 @media (max-width: 991px) {
   #header {
@@ -365,7 +406,7 @@ span {
 #hero .btn-watch-video i {
   align-items: center;
   align-content: center;
-  color: var(--text);
+  color: var(--subtext);
   font-size: 32px;
   line-height: 0;
   margin-right: 8px;
@@ -449,9 +490,17 @@ span {
 /*--------------------------------------------------------------
 # 8 Education Section
 --------------------------------------------------------------*/
+.progress_bar i{
+  color: var(--line);
+}
+
+.progress_bar i:hover{
+  color: var(--line-hover);
+}
+
 .progress_bar .pro-bar {
   background: hsl(255, 255, 97%);
-  box-shadow: var(--box-shadow) inset;
+  box-shadow: var(--box-shadow-line) inset;
   height: 4px;
   margin-bottom: 12px;
   margin-top: 50px;
@@ -554,7 +603,7 @@ span {
 
 #portfolio .portfolio-wrap .portfolio-info {
   align-items: center;
-  background: rgba(255, 255, 255, 0.753);
+  background: var(--bg-hover);
   bottom: 0;
   display: flex;
   justify-content: center;
@@ -629,7 +678,7 @@ span {
 }
 
 #experience .experience-list .question {
-  color: var(--line-dark);
+  color: var(--line-hover);
   cursor: pointer;
   display: block;
   font-family: var(--line);
@@ -761,134 +810,14 @@ span {
   color: #fff;
 }
 
-.contact .info .email:hover i,
-.contact .info .address:hover i,
-.contact .info .phone:hover i {
-  background: var(--line);
-  color: #fff;
-}
-
-.contact .php-email-form {
-  border-bottom: 3px solid var(--line);
-  border-top: 3px solid var(--line);
-  padding: 30px;
-  width: 100%;
-}
-
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.contact .php-email-form .error-message {
-  background: #ed3c0d;
-  color: #fff;
-  display: none;
-  font-weight: 600;
-  padding: 15px;
-  text-align: left;
-}
-
-.contact .php-email-form .error-message br+br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  background: var(--line);
-  color: #fff;
-  display: none;
-  font-weight: 600;
-  padding: 15px;
-  text-align: center;
-}
-
-.contact .php-email-form .loading {
-  background: #fff;
-  display: none;
-  padding: 15px;
-  text-align: center;
-}
-
-.contact .php-email-form .loading:before {
-  animation: animate-loading 1s linear infinite;
-  border: 3px solid var(--line);
-  border-radius: 50%;
-  border-top-color: #eee;
-  content: "";
-  display: inline-block;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  width: 24px;
-  -webkit-animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
-  border-radius: 0;
-  border-radius: 4px;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
-  border-color: var(--line);
-}
-
-.contact .php-email-form input {
-  height: 44px;
-}
-
-.contact .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.contact .php-email-form button[type=submit] {
-  background: var(--line);
-  border: 0;
-  border-radius: 4px;
-  box-shadow: 0 8px 28px var(--fill-dark);
-  color: var(--light);
-  display: inline-block;
-  font-size: 16px;
-  letter-spacing: 1px;
-  margin-right: 25px;
-  padding: 8px 30px 10px 30px;
-  text-transform: capitalize;
-  transition: 0.5s;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: var(--line-dark);
-  box-shadow: 0 8px 28px rgba(32, 107, 251, 0.45);
-  color: var(--light);
-}
-
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 /*--------------------------------------------------------------
 # 12 Footer
 --------------------------------------------------------------*/
 
 #footer {
-  background-color: #f3f4f6;
+  background: var(--bg-gradient);
+  ;
   color: var(--subtext);
   font-size: 14px;
   position: relative;
@@ -918,47 +847,6 @@ span {
   padding: 0;
 }
 
-#footer .footer-top .footer-newsletter {
-  font-size: 15px;
-  margin-top: 30px;
-  text-align: center;
-}
-
-#footer .footer-top .footer-newsletter form {
-  background: #fff;
-  border: 1px solid #e4e6ea;
-  border-radius: 4px;
-  padding: 6px 10px;
-  position: relative;
-  text-align: left;
-}
-
-#footer .footer-top .footer-newsletter form input[type=email] {
-  border: 0;
-  padding: 4px 8px;
-  width: calc(100% - 100px);
-}
-
-#footer .footer-top .footer-newsletter form input[type=submit] {
-  background: var(--line);
-  border: 0;
-  border-radius: 0 4px 4px 0;
-  bottom: -1px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  color: var(--light);
-  font-size: 16px;
-  padding: 0 20px;
-  position: absolute;
-  right: -1px;
-  top: -1px;
-  transition: 0.3s;
-}
-
-#footer .footer-top .footer-newsletter form input[type=submit]:hover {
-  background: var(--line);
-  box-shadow: 0 8px 28px var(--line-dark);
-}
-
 #footer .footer-top .social-links {
   margin-top: 30px;
 }
@@ -985,7 +873,7 @@ span {
 }
 
 #footer .footer-bottom {
-  border-top: 1px solid #d9dce2;
+  border-top: 1px solid #A0A7AC;
   position: relative;
   padding-bottom: 40px;
   padding-top: 40px;

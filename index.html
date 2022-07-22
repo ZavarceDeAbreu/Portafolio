@@ -28,13 +28,13 @@
   <title>Dayanna Zavarce</title>
 </head>
 
-<body>
+<body class="dark">
 
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
-      <a class="logo" href="index.html">DN<span>ZDA.</span></a>
+      <a class="logo" href="index.html">DN<span>ZDA.</a>
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">inicio </a></li>
@@ -43,8 +43,10 @@
           <li><a class="nav-link scrollto" href="#portfolio">portafolio</a></li>
           <li><a class="nav-link scrollto" href="#experience">experiencia</a></li>
           <li><a class="nav-link scrollto" href="#contact">contacto</a></li>
+          <i class="bi bi-brightness-high toggle-btn"></i>
           <!-- <li><a class="getstarted" href="#">ingresar</a></li> -->
         </ul>
+        
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
     </div>
@@ -63,14 +65,14 @@
             <h3><span>¡</span>Hola<span>!</span> me llamo</h3>
             <h1>Dayanna Zavarce<span>.</span></h1>
             <p>Developer Back-End</p>
-            <a href="#about" class="btn">resumen</a>
+            <a href="assets/Natali Zavarce.pdf" target="_blank" rel="noopener noreferrer" class="btn">resumen</a>
             <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox btn btn-watch-video"><i
                 class="bi bi-play-circle"></i><span>reproducir video</span></a>
           </div>
         </div>
         <div class="col-lg-6 d-lg-flex flex-lg-column align-items-stretch order-1 order-lg-2 hero-img"
           data-aos="fade-up">
-          <img class="img-fluid" src="assets/img/HeroImage.svg" alt="">
+          <img id="imgchange" class="img-fluid" src="assets/img/example-16.svg" alt="">
         </div>
       </div>
     </div>
@@ -86,9 +88,9 @@
       <div class="row">
 
         <div class="col-lg-6 align-self-center" data-aos="fade-right">
-          <img class="img-fluid mx-auto d-block" src="assets/img/about.png" alt="imagen animada de dayanna" />
+          <img class="img-fluid mx-auto d-block" src="assets/img/aboutsection.png" alt="imagen animada de dayanna" />
         </div>
-        <aside class="col-lg-6 pt-4 pt-lg-0 content align-content-center" data-aos="fade-left">
+        <aside class="col-lg-6 pt-4 pt-lg-0 content align-self-center" data-aos="fade-left">
           <div class="section-title">
             <span>sobre mi</span>
             <h2>sobre mi</h2>
@@ -99,15 +101,15 @@
             interés siempre ha girado al rededor del desarrollo de
             aplicaciones
             seguras y eficaces, por ese motivo enfoqué mi carrera a la programacion con Java, estudiando
-            en la Instituto de Tecnología EducacionIT. Durante ese periodo Aprendi a diseñar, planificar y construir
+            en la Instituto de Tecnología EducacionIT. Durante ese periodo aprendi a diseñar, planificar y construir
             soluciones
-            basadas en software, desarrollando de manera efectiva en equipos ágiles y de alto desempeño.
+            basadas en software, desarrollando de manera efectiva en equipos ágiles y de alto desempeño. Me considero una persona con: 
           </p>
           <ul>
-            <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-            <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-            <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-              irure dolor in reprehenderit in voluptate trideta storacalaperda</li>
+            <li><i class="bi bi-check-circle"></i> Creatividad e imaginación</li>
+            <li><i class="bi bi-check-circle"></i> Buena comunicación</li>
+            <li><i class="bi bi-check-circle"></i> Adaptación y flexibilidad</li>
+            <li><i class="bi bi-check-circle"></i> Pasión por la programaciòn</li>
           </ul>
         </aside>
       </div>
@@ -124,10 +126,10 @@
           <div class="section-title">
             <span>Habilidades</span>
             <h2>Habilidades</h2>
-            <p>“Lo que con mucho trabajo se adquiere, más se ama”. <i>Aristóteles</i><span>.</span></p>
+            <p>“Lo que con mucho trabajo se adquiere, más se ama”. <i>Aristóteles</i></p>
           </div>
           <div>
-            <p style="margin-bottom: 30px;">Comencé mis estudios con la carrera Full Stack en el instituto Educación IT,
+            <p>Comencé mis estudios con la carrera Full Stack en el instituto Educación IT,
               la cual se compone de 14
               materias que van desde tecnologías Front End (HTML, CSS, JavaScrip) y con tecnologías Back End (SQL, J2SE,
               Spring, Hibernate, J2EE) implementando práctica
@@ -136,9 +138,7 @@
               en Sprint Bot, asi como tambien
               cursando la carrera full Stack en Argentina programa, adquiriendo conocimientos en tecnologías como
               Angular.
-            </p>
-            <a class="btn" href="">Certificados</a>
-            
+            </p>  
           </div>
         </div>
         <div class="col-lg-6 progress-content">
@@ -146,52 +146,78 @@
             <div class="pro-bar">
               <small class="progress_bar_title">
                 Java
-                <span class="progress_number">89%</span>
+                <a href="assets/Certificados/JavaArchitect.jpeg"
+                data-gallery="certificatesGallery" class="portfolio-lightbox preview-link"><i
+                  class="bx bx-plus"></i></a>
+                  <a href="assets/Certificados/JavaSpring.jpeg"
+                data-gallery="certificatesGallery" class="portfolio-lightbox preview-link"></a>
+                <a href="assets/Certificados/Hibernate.jpeg"
+                data-gallery="certificatesGallery" class="portfolio-lightbox preview-link"></a>
+                <a href="assets/Certificados/JavaWebApi.jpeg"
+                data-gallery="certificatesGallery" class="portfolio-lightbox preview-link"></a>
+                <a href="assets/Certificados/JavaStandar.jpeg"
+                data-gallery="certificatesGallery" class="portfolio-lightbox preview-link"></a>
+                <a href="assets/Certificados/JavaAdvance.jpeg"
+                data-gallery="certificatesGallery" class="portfolio-lightbox preview-link"></a>
+                <a href="assets/Certificados/POO.jpeg"
+                data-gallery="certificatesGallery" class="portfolio-lightbox preview-link"></a>
+                <span class="progress_number">90%</span>
               </small>
-              <span class="progress-bar-inner" style="background-color: var(--line); width: 89%;" data-value="89"
-                data-percentage-value="89"></span>
+              <span class="progress-bar-inner" style="background-color: var(--line); width: 90%;" data-value="89"
+                data-percentage-value="90"></span>
             </div>
           </div>
           <div class="progress_bar">
             <div class="pro-bar">
               <small class="progress_bar_title">
                 MySql
-                <span class="progress_number">90%</span>
+                <a href="assets/Certificados/SQL.jpeg"
+                data-gallery="certificatesGallery" class="portfolio-lightbox preview-link"><i
+                class="bx bx-plus"></i></a>
+                <span class="progress_number">85%</span>
               </small>
-              <span class="progress-bar-inner" style="background-color: var(--line); width: 90%;" data-value="89"
-                data-percentage-value="89"></span>
+              <span class="progress-bar-inner" style="background-color: var(--line); width: 85%;" data-value="85"
+                data-percentage-value="85"></span>
             </div>
           </div>
           <div class="progress_bar">
             <div class="pro-bar">
               <small class="progress_bar_title">
-                HTML5
-                <a href="assets/img/portafolio/WhatsApp Image 2022-05-10 at 2.09.07 PM.jpeg"
-                data-gallery="certificatesGallery" class="portfolio-lightbox preview-link" title="App 4"><i
+                HTML5 CSS
+                <a href="assets/Certificados/Html.jpeg"
+                data-gallery="certificatesGallery" class="portfolio-lightbox preview-link"><i
                   class="bx bx-plus"></i></a>
-                <span class="progress_number">70%</span>
+                <span class="progress_number">80%</span>
               </small>
-              <span class="progress-bar-inner" style="background-color: var(--line); width: 70%;" data-value="89"
-                data-percentage-value="89"></span>
+              <span class="progress-bar-inner" style="background-color: var(--line); width: 80%;" data-value="80"
+                data-percentage-value="80"></span>
             </div>
           </div>
           <div class="progress_bar">
             <div class="pro-bar">
               <small class="progress_bar_title">
                 JS
-                <span class="progress_number">60%</span>
+                <a href="assets/Certificados/JavaScriptAvanzado.jpeg"
+                data-gallery="certificatesGallery" class="portfolio-lightbox preview-link"><i
+                  class="bx bx-plus"></i></a>
+                  <a href="assets/Certificados/JavaScritp.jpeg"
+                  data-gallery="certificatesGallery" class="portfolio-lightbox preview-link"></a>
+                <span class="progress_number">70%</span>
               </small>
-              <span class="progress-bar-inner" style="background-color: var(--line); width: 60%;" data-value="89"
-                data-percentage-value="89"></span>
+              <span class="progress-bar-inner" style="background-color: var(--line); width: 70%;" data-value="100"
+                data-percentage-value="100"></span>
             </div>
           </div>
           <div class="progress_bar">
             <div class="pro-bar">
               <small class="progress_bar_title">
-                CSS
-                <span class="progress_number">70%</span>
+                Habilidades de Trabajo
+                <a href="assets/Certificados/Git.jpeg"
+                data-gallery="certificatesGallery" class="portfolio-lightbox preview-link"><i
+                  class="bx bx-plus"></i></a>
+                <span class="progress_number">90%</span>
               </small>
-              <span class="progress-bar-inner" style="background-color: var(--line); width: 70%;" data-value="89"
+              <span class="progress-bar-inner" style="background-color: var(--line); width: 90%;" data-value="98"
                 data-percentage-value="89"></span>
             </div>
           </div>
@@ -224,19 +250,73 @@
 
       <div class="row portfolio-container">
 
+        <div class="col-lg-4 col-md-6 portfolio-item filter-frontend">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portafolio/presupuesto.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <div class="portfolio-info-content">
+                <h4>App de Presupuesto</h4>
+                <span>Js</span>
+                <div class="portfolio-links">
+                  <a href="assets/img/portafolio/presupuesto.jpeg" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox preview-link" title="App de Presupuesto"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/ZavarceDeAbreu/JsFormatoMoneda" target="_blank" rel="noopener noreferrer" class="details-link" title="More Details"><i
+                      class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <div class="col-lg-4 col-md-6  portfolio-item filter-backend">
+        <div class="col-lg-4 col-md-6  portfolio-item filter-backend filter-frontend">
           <div class="portfolio-wrap">
             <img src="assets/img/portafolio/Captura web_13-5-2022_102111_localhost.jpeg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <div class="portfolio-info-content">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>App web para el control de cliente</h4>
+                <span>JPS</span>
                 <div class="portfolio-links">
-                  <a href="assets/img/portafolio/WhatsApp Image 2022-05-10 at 2.09.07 PM.jpeg"
-                    data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i
+                  <a href="assets/img/portafolio/Captura web_13-5-2022_102111_localhost.jpeg"
+                    data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App web para el control de cliente"><i
                       class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="details-link" title="More Details"><i
+                  <a href="https://github.com/ZavarceDeAbreu/AppWebControlCliente" target="_blank" rel="noopener noreferrer" class="details-link" title="More Details"><i
+                      class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-backend filter-frontend">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portafolio/gestionusuarios.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <div class="portfolio-info-content">
+                <h4>Sistema de Gestion de Usuarios</h4>
+                <span>Spring / Hibernate / JWT</span>
+                <div class="portfolio-links">
+                  <a href="assets/img/portafolio/gestionusuarios.jpeg" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox preview-link" title="Sistema de Gestion de Usuarios"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/ZavarceDeAbreu/Sistema-de-Gestion-de-Usuarios" target="_blank" rel="noopener noreferrer" class="details-link" title="More Details"><i
+                      class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="col-lg-4 col-md-6 portfolio-item filter-backend">
+          <div class="portfolio-wrap">
+            <img src="assets/img/portafolio/api.jpeg" class="img-fluid" alt="">
+            <div class="portfolio-info">
+              <div class="portfolio-info-content">
+                <h4>Java Spring Boot (API)</h4>
+                <span>Spring / Hibernate / JWT</span>
+                <div class="portfolio-links">
+                  <a href="assets/img/portafolio/api.jpeg" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox preview-link" title="Java Spring Boot (API)"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/ZavarceDeAbreu/Disney_Information_Api" target="_blank" rel="noopener noreferrer" class="details-link" title="More Details"><i
                       class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -246,54 +326,15 @@
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-frontend">
           <div class="portfolio-wrap">
-            <img src="assets/img/portafolio/1650057046853.jpg" class="img-fluid" alt="">
+            <img src="assets/img/portafolio/portafolio.jpeg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <div class="portfolio-info-content">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>Portafolio Web</h4>
+                <span>HTML / CSS / JS</span>
                 <div class="portfolio-links">
-                  <a href="assets/img/portafolio/1650057046853.jpg" data-gallery="portfolioGallery"
-                    class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="details-link" title="More Details"><i
-                      class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="col-lg-4 col-md-6  portfolio-item filter-backend">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portafolio/WhatsApp Image 2022-05-10 at 2.09.07 PM.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <div class="portfolio-info-content">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <div class="portfolio-links">
-                  <a href="assets/img/portafolio/WhatsApp Image 2022-05-10 at 2.09.07 PM.jpeg"
-                    data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i
-                      class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="details-link" title="More Details"><i
-                      class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-4 col-md-6  portfolio-item filter-frontend">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portafolio/WhatsApp Image 2022-05-10 at 2.09.07 PM.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <div class="portfolio-info-content">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <div class="portfolio-links">
-                  <a href="assets/img/portafolio/WhatsApp Image 2022-05-10 at 2.09.07 PM.jpeg"
-                    data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i
-                      class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="details-link" title="More Details"><i
+                  <a href="assets/img/portafolio/portafolio.jpeg" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox preview-link" title="Portafolio Web"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/ZavarceDeAbreu/Portafolio" target="_blank" rel="noopener noreferrer" class="details-link" title="More Details"><i
                       class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -303,16 +344,15 @@
 
         <div class="col-lg-4 col-md-6 portfolio-item filter-backend">
           <div class="portfolio-wrap">
-            <img src="assets/img/portafolio/WhatsApp Image 2022-05-10 at 2.09.07 PM.jpeg" class="img-fluid" alt="">
+            <img src="assets/img/portafolio/api2.jpeg" class="img-fluid" alt="">
             <div class="portfolio-info">
               <div class="portfolio-info-content">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
+                <h4>API ONG</h4>
+                <span>Spring / Hibernate / JWT</span>
                 <div class="portfolio-links">
-                  <a href="assets/img/portafolio/WhatsApp Image 2022-05-10 at 2.09.07 PM.jpeg"
-                    data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i
-                      class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="details-link" title="More Details"><i
+                  <a href="assets/img/portafolio/api2.jpeg" data-gallery="portfolioGallery"
+                    class="portfolio-lightbox preview-link" title="API ONG"><i class="bx bx-plus"></i></a>
+                  <a href="https://github.com/alkemyTech/OT251-Server" target="_blank" rel="noopener noreferrer" class="details-link" title="More Details"><i
                       class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -320,24 +360,6 @@
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-frontend">
-          <div class="portfolio-wrap">
-            <img src="assets/img/portafolio/WhatsApp Image 2022-05-10 at 2.09.07 PM.jpeg" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <div class="portfolio-info-content">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <div class="portfolio-links">
-                  <a href="assets/img/portafolio/WhatsApp Image 2022-05-10 at 2.09.07 PM.jpeg"
-                    data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 1"><i
-                      class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" class="details-link" title="More Details"><i
-                      class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section><!-- Fin porfolio Section -->
@@ -413,41 +435,18 @@
               <p>+54 11 28060021</p>
             </div>
 
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105227.91368300773!2d-58.98694775282102!3d-34.493444583847776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9cb6643d2003%3A0xa8da0402f634b636!2sPilar%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1652975366844!5m2!1ses-419!2sar"
-              frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
-          </div>
+        </div>
 
+     
         </div>
 
         <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-          <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-            <div class="row">
-              <div class="form-group col-md-6">
-                <label for="name">Tu nombre</label>
-                <input type="text" name="name" class="form-control" id="name" required>
-              </div>
-              <div class="form-group col-md-6 mt-3 mt-md-0">
-                <label for="name">Tu email</label>
-                <input type="email" class="form-control" name="email" id="email" required>
-              </div>
-            </div>
-            <div class="form-group mt-3">
-              <label for="name">Asunto</label>
-              <input type="text" class="form-control" name="subject" id="subject" required>
-            </div>
-            <div class="form-group mt-3">
-              <label for="name">Mensaje</label>
-              <textarea class="form-control" name="message" rows="10" required></textarea>
-            </div>
-            <div class="my-3">
-              <div class="loading">Cargando</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Su mensaje ha sido enviado. Muchas gracias!</div>
-            </div>
-            <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
-          </form>
+          <div class="info">
+          <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105227.91368300773!2d-58.98694775282102!3d-34.493444583847776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9cb6643d2003%3A0xa8da0402f634b636!2sPilar%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1652975366844!5m2!1ses-419!2sar"
+          frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
         </div>
+      </div>
 
       </div>
 

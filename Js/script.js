@@ -1,16 +1,29 @@
-
-/* const prt_section = document.querySelector(".portfolio");
-const zoom_icons = document.querySelectorAll(".zoom-icon");
-const modal_overlay = document.querySelector(".modal-overlay");
-const images = document.querySelectorAll(".images img");
-const prev_btn = document.querySelector(".prev-btn");
-const nex_btn = document.querySelector(".next-btn");
- */
 /*--------AOS Animation--------*/
 AOS.init({
   duration: 1000,
   easing: "ease-in-out-back",
   once: true
+});
+
+const toggle_btn = document.querySelector(".toggle-btn")
+const imgchangehero = document.getElementById("img-fluid")
+let firstTheme = localStorage.getItem("dark")
+changeTheme(+firstTheme);
+function changeTheme(isDark) {
+  if (!document.body.classList.contains("dark")) {
+    document.body.classList.add("dark");
+    toggle_btn.classList.replace("bi-moon-stars", "bi-brightness-high")
+    document.getElementById('imgchange')
+      .src ="../assets/img/example-16.svg"
+  } else {
+    document.body.classList.remove("dark");
+    toggle_btn.classList.replace("bi-brightness-high", "bi-moon-stars")
+    document.getElementById('imgchange')
+      .src = "../assets/img/example-17.svg";
+  }
+}
+toggle_btn.addEventListener("click", () => {
+  changeTheme(!document.body.classList.contains("dark"));
 });
 
 (function () {
@@ -19,7 +32,7 @@ AOS.init({
   /**
    * Easy selector helper function
    */
-   const select = (el, all = false) => {
+  const select = (el, all = false) => {
     el = el.trim()
     if (all) {
       return [...document.querySelectorAll(el)]
@@ -122,7 +135,7 @@ AOS.init({
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function (e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -131,7 +144,7 @@ AOS.init({
   /**
    * Mobile nav dropdowns activate
    */
-  on('click', '.navbar .dropdown > a', function(e) {
+  on('click', '.navbar .dropdown > a', function (e) {
     if (select('#navbar').classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
@@ -141,7 +154,7 @@ AOS.init({
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
+  on('click', '.scrollto', function (e) {
     if (select(this.hash)) {
       e.preventDefault()
 
@@ -186,9 +199,9 @@ AOS.init({
 
       let portfolioFilters = select('#portfolio-flters li', true);
 
-      on('click', '#portfolio-flters li', function(e) {
+      on('click', '#portfolio-flters li', function (e) {
         e.preventDefault();
-        portfolioFilters.forEach(function(el) {
+        portfolioFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
@@ -226,94 +239,4 @@ AOS.init({
     }
   });
 
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
-    }
-  });
 })()
-
-  /* ------------Menu----------- */
-  /* ((d) => {
-    const $btnMenu = d.querySelector(".menu-btn"),
-      $navigation = d.querySelector(".navigation");
-
-    $btnMenu.addEventListener("click", (e) => {
-      $btnMenu.firstElementChild.classList.toggle("none");
-      $btnMenu.lastElementChild.classList.toggle("none");
-      $navigation.classList.toggle("is-active");
-    });
-
-    d.addEventListener("click", (e) => {
-      if (!e.target.matches(".navigation a")) return false;
-
-      $btnMenu.firstElementChild.classList.remove("none");
-      $btnMenu.lastElementChild.classList.add("none");
-      $navigation.classList.remove("is-active");
-    });
-  })(document); */
-  /*-------Reveal Animation-------*/
-  /*---------Skill Bar Animation-------------*/
-
-  /*---------Modal Animation-------------*/
- /*  let currentIndex = 0;
-
-  zoom_icons.forEach((icn, i) =>
-    icn.addEventListener("click", () => {
-      prt_section.classList.add("open");
-      document.body.classList.add("stopScrolling");
-      currentIndex = i;
-      changeImage(currentIndex);
-    })
-  );
-
-  modal_overlay.addEventListener("click", () => {
-    prt_section.classList.remove("open");
-    document.body.classList.remove("stopScrolling");
-  });
-
-  prev_btn.addEventListener("click", () => {
-    if (currentIndex === 0) {
-      currentIndex = 5
-    } else {
-      currentIndex--;
-    }
-    changeImage(currentIndex);
-  })
-
-  nex_btn.addEventListener("click", () => {
-    if (currentIndex === 5) {
-      currentIndex = 0
-    } else {
-      currentIndex++;
-    }
-    changeImage(currentIndex);
-  })
-
-  function changeImage(index) {
-    images.forEach((img) => img.classList.remove("showImage"));
-    images[index].classList.add("showImage");
-  } */
