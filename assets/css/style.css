@@ -24,7 +24,7 @@
   --box-shadow-dark: 0px 5px 10px rgba(95, 0, 203, 0.541);
   --box-shadow-line: 0px 5px 10px rgba(95, 0, 203, 0.205);
   --bg: rgb(244, 249, 252);
-  --bg-hover: rgba(244, 249, 252, 0.753);
+  --bg-hover: rgba(255, 255, 255, 0.904);
   --bg-gradient: linear-gradient(to right, #c9d6ff, #e2e2e2);
   --fill: rgba(95, 0, 203, 0.5);
   --fill-dark: rgba(95, 0, 203, 0.048);
@@ -42,7 +42,7 @@ body.dark {
   --box-shadow-line: 0px 5px 10px rgba(0, 0, 0, 0.603);
   --bg: #192229;
   --bg-hover: rgba(33, 46, 54, 0.753);
-  --bg-gradient: linear-gradient(to right, #141e30, #243b55);
+  --bg-gradient: linear-gradient(to right, #192229, #212e36);
   --fill: #EDCA40;
   --fill-dark: #212E36;
   --light: #212e36;
@@ -455,7 +455,7 @@ span {
 
 @media (max-width: 575px) {
   #hero {
-    background-image: url(/assets/img/imagenesFondo/ttten.svg);
+    background-image: url(/assets/css/ttten.svg);
     background-repeat: no-repeat;
 
   }
@@ -768,6 +768,11 @@ span {
   justify-content: center;
   transition: all 0.3s ease-in-out;
   width: 44px;
+}
+
+.contact .info i:hover{
+  background: var(--line);
+  color: #fff;
 }
 
 .contact .info h4 {
