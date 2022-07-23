@@ -12,12 +12,12 @@ function changeTheme(isDark) {
     document.body.classList.add("dark");
     toggle_btn.classList.replace("bi-moon-stars", "bi-brightness-high")
     document.getElementById('imgchange')
-      .src ="../assets/Js/example-16.svg"
+      .src ="./assets/Js/example-16.svg"
   } else {
     document.body.classList.remove("dark");
     toggle_btn.classList.replace("bi-brightness-high", "bi-moon-stars")
     document.getElementById('imgchange')
-      .src = "../assets/Js/example-17.svg";
+      .src = "./assets/Js/example-17.svg";
   }
 }
 toggle_btn.addEventListener("click", () => {
